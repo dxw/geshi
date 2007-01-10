@@ -1,29 +1,18 @@
 <?php
 /*************************************************************************************
- * ada.php
+ * idl.php
  * -------
- * Author: Tux (tux@inmail.cz)
- * Copyright: (c) 2004 Tux (http://tux.a4.cz/), Nigel McNie (http://qbnz.com/highlighter)
+ * Author: Cedric Bosdonnat (cedricbosdo@openoffice.org)
+ * Copyright: (c) 2006 Cedric Bosdonnat
  * Release Version: 1.0.7.16
  * CVS Revision Version: $Revision$
- * Date Started: 2004/07/29
+ * Date Started: 2006/08/20
  * Last Modified: $Date$
  *
- * Ada language file for GeSHi.
- * Words are from SciTe configuration file
+ * Unoidl language file for GeSHi.
  *
- * CHANGES
- * -------
- * 2004/11/27 (1.0.2)
- *  -  Added support for multiple object splitters
- * 2004/10/27 (1.0.1)
- *   -  Removed apostrophe as string delimiter
- *   -  Added URL support
- * 2004/08/05 (1.0.0)
- *   -  First Release
- *
- * TODO (updated 2004/11/27)
- * -------------------------
+ * 2006/08/20 (1.0.0)
+ *  -  First Release
  *
  *************************************************************************************
  *
@@ -45,66 +34,66 @@
  *
  ************************************************************************************/
 
+
 $language_data = array (
-	'LANG_NAME' => 'Ada',
-	'COMMENT_SINGLE' => array(1 => '--'),
+	'LANG_NAME' => 'Uno Idl',
+	'COMMENT_SINGLE' => array(1 => '//', 2 => '#'),
 	'COMMENT_MULTI' => array('/*' => '*/'),
 	'CASE_KEYWORDS' => GESHI_CAPS_NO_CHANGE,
-	'QUOTEMARKS' => array('"'),
+	'QUOTEMARKS' => array("'", '"'),
 	'ESCAPE_CHAR' => '\\',
 	'KEYWORDS' => array(
 		1 => array(
-			'begin', 'declare', 'do', 'else', 'elsif', 'exception', 'for', 'if',
-			'is', 'loop', 'while', 'then', 'is', 'end', 'select', 'case', 'while',  'until',
-			'goto', 'return'
+			'published', 'get', 'set', 'service', 'singleton', 'type', 'module', 'interface', 'struct',
+			'const', 'constants', 'exception', 'enum', 'raises', 'typedef'
 			),
 		2 => array(
-			'abs', 'and', 'mod', 'not', 'or', 'rem', 'xor'
-		  	),
+            'bound', 'maybeambiguous', 'maybedefault', 'maybevoid', 'oneway', 'optional',
+            'readonly', 'in', 'out', 'inout', 'attribute', 'transient', 'removable'
+          	),
 		3 => array(
-			'abort', 'abstract', 'accept', 'access', 'aliased', 'all', 'array', 'at', 'body',
-			'constant', 'delay', 'delta', 'digits', 'entry', 'exit',
-			'function', 'generic', 'in', 'limited', 'new', 'null', 'of', 'others', 'out', 'package', 'pragma',
-			'private', 'procedure', 'protected', 'raise', 'range', 'record', 'renames', 'requeue', 'reverse',
-			'separate', 'subtype', 'tagged', 'task', 'terminate', 'type', 'use', 'when', 'with'
-			)
+			'True', 'False', 'TRUE', 'FALSE'
+            ),
+		4 => array(
+		    'string', 'long', 'byte', 'hyper', 'boolean', 'any', 'char', 'double', 'long', 
+            'void', 'sequence', 'unsigned', '...'
+            ),
 		),
 	'SYMBOLS' => array(
-		'(', ')'
+        '(', ')', '{', '}', '[', ']', '=', '+', '-', '*', '/', '!', '%', '^', '&', ':', ';'
 		),
 	'CASE_SENSITIVE' => array(
 		GESHI_COMMENTS => true,
-		1 => false,
-		2 => false,
-		3 => false,
+		1 => true,
+		2 => true,
+		3 => true,
+		4 => true,
 		),
 	'STYLES' => array(
 		'KEYWORDS' => array(
-			1 => 'color: #00007f;',
-			2 => 'color: #0000ff;',
-			3 => 'color: #46aa03; font-weight:bold;',
-			),
-		'BRACKETS' => array(
-			0 => 'color: #66cc66;'
+			1 => 'color: #990078; font-weight: bold',
+			2 => 'color: #36dd1c;',
+			3 => 'color: #990078; font-weight: bold',
+			4 => 'color: #0000ec;'
 			),
 		'COMMENTS' => array(
-			1 => 'color: #adadad; font-style: italic;',
-			'MULTI' => 'color: #808080; font-style: italic;'
+			1 => 'color: #3f7f5f;',
+			2 => 'color: #808080;',
+			'MULTI' => 'color: #4080ff; font-style: italic;'
 			),
 		'ESCAPE_CHAR' => array(
-			0 => 'color: #000099; font-weight: bold;'
+			0 => 'color: #666666; font-weight: bold;'
 			),
 		'BRACKETS' => array(
-			0 => 'color: #66cc66;'
+			0 => 'color: #808080;'
 			),
 		'STRINGS' => array(
-			0 => 'color: #7f007f;'
-			),
-		'NUMBERS' => array(
 			0 => 'color: #ff0000;'
 			),
+		'NUMBERS' => array(
+			0 => 'color: #0000dd;'
+			),
 		'METHODS' => array(
-			1 => 'color: #202020;'
 			),
 		'SYMBOLS' => array(
 			0 => 'color: #66cc66;'
@@ -115,13 +104,10 @@ $language_data = array (
 			)
 		),
 	'URLS' => array(
-		1 => '',
-		2 => '',
-		3 => ''
 		),
-	'OOLANG' => true,
+	'OOLANG' => false,
 	'OBJECT_SPLITTERS' => array(
-		1 => '.'
+		1 => '::'
 		),
 	'REGEXPS' => array(
 		),

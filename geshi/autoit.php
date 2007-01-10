@@ -4,7 +4,7 @@
  * --------
  * Author: mastrboy
  * Copyright: (c) 2006 and to GESHi ;)
- * Release Version: 1.0.7.10
+ * Release Version: 1.0.7.16
  * Date Started: 26.01.2006
  *
  * Current bugs & todo:
@@ -36,7 +36,7 @@
  ************************************************************************************/
 
 $language_data = array (
-	'LANG_NAME' => 'AUTOIT',
+	'LANG_NAME' => 'AutoIT',
 	'COMMENT_SINGLE' => array(';'),
 	'COMMENT_MULTI' => array('#comments-start' => '#comments-end'),
 	'CASE_KEYWORDS' => GESHI_CAPS_NO_CHANGE,
@@ -169,7 +169,7 @@ $language_data = array (
 		0 => "[\\$]{1,2}[a-zA-Z_][a-zA-Z0-9_]*",
 		),
 	'STRICT_MODE_APPLIES' => GESHI_MAYBE,
-/*	'SCRIPT_DELIMITERS' => array(
+	'SCRIPT_DELIMITERS' => array(
 		0 => array(
 			'<?php' => '?>'
 			),
@@ -182,8 +182,7 @@ $language_data = array (
 		3 => array(
 			'<script language="php">' => '</script>'
 			)
-		),*/
-
+		),
 	'HIGHLIGHT_STRICT_BLOCK' => array(
 		0 => true,
 		1 => true,
@@ -193,4 +192,3 @@ $language_data = array (
 );
 
 ?>
-

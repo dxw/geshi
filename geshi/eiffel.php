@@ -4,7 +4,7 @@
  * ----------
  * Author: Zoran Simic (zsimic@axarosenberg.com)
  * Copyright: (c) 2005 Zoran Simic
- * Release Version: 1.0.7.10
+ * Release Version: 1.0.7.16
  * CVS Revision Version: $Revision$
  * Date Started: 2005/06/30
  * Last Modified: $Date$
@@ -340,7 +340,7 @@
 		),
 	'STYLES' => array(
 		'KEYWORDS' => array(
-			1 => 'color: #0600FF; background-color: #FFF0E0; font-weight: bold;',
+			1 => 'color: #0600FF; font-weight: bold;',
 			2 => 'color: #0600FF; font-weight: bold;',
 			3 => 'color: #800080;',
 			4 => 'color: #800000',
@@ -394,4 +394,3 @@
 );
 
 ?>
-
